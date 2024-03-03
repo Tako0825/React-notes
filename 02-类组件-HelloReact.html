@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // 类组件
+        class App extends React.Component {
+            constructor() {
+                super()
+                // data
+                this.state = {
+                    slogan: "World"
+                }
+            }
+            // methods
+            changeSlogan() {
+                this.setState({
+                    slogan: this.state.slogan=="World"?"React":"World"
+                })
+            }
+            // render
+            render() {
+                let { slogan } = this.state
+                return (
+                    <div>
+                        <h1>Hello {slogan}.</h1>  
+                        <button type="button" onClick={this.changeSlogan.bind(this)}>click</button>  
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.createRoot(document.querySelector("#root")).render(<App/>)
+    </script>
+</body>
+</html>

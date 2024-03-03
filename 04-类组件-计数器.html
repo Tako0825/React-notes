@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        class App extends React.Component {
+            constructor() {
+                super()
+                this.state = {
+                    num: 0
+                }
+            }
+            render() {
+                const { num } = this.state
+                return (
+                    <div>
+                        <button type="button" onClick={this.decrease.bind(this)}>-</button>  
+                        <span>{num}</span>
+                        <button type="button" onClick={this.increase.bind(this)}>+</button>    
+                    </div>
+                )
+            }
+            increase() {
+                this.setState({ num: this.state.num + 1 })
+            }
+            decrease() {
+                this.setState({ num: this.state.num - 1 })
+            }
+        }
+
+        ReactDOM.createRoot(document.querySelector("#root")).render(<App/>)
+    </script>
+</body>
+</html>
