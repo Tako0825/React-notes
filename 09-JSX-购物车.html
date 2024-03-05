@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        class App extends React.Component {
+            constructor() {
+                super()
+                this.state = {
+                    products: [
+                        { id: 1, name: "背带裤", price: 99, count: 0 },
+                        { id: 2, name: "中分头", price: 239, count: 0 },
+                        { id: 3, name: "篮球", price: 59, count: 0 },
+                        { id: 4, name: "皮鞋", price: 199, count: 0 }
+                    ],
+                    total: 0
+                }
+            }
+
+            renderThead() {
+                return (
+                    <tr>
+                        <th>序列号</th>
+                        <th>产品名称</th>
+                        <th>价格</th>
+                        <th>数量</th>
+                        <th>其他</th>
+                    </tr>
+                )
+            }
+
+            renderTbody() {
+                const { products } = this.state
+                return products.map((product, index) => (
+                    <tr key={product.id}>
+                        <td>{product.id}</td>
+                        <td>{product.name}</td>
+                        <td>{product.price}</td>
+                        <td>
+                            <button 
+                                onClick={() => this.changeCount(product, -1)}
+                                disabled={!product.count}
+                            >-</button>
+                            {product.count}
+                            <button onClick={() => this.changeCount(product, 1)}>+</button>
+                        </td>
+                        <td>
+                            <button onClick={() => this.remove(product.id)}>移除</button>
+                        </td>
+
+                    </tr>
+                ))
+            }
+
+            changeCount(product, count) {
+                const { id, price } = product
+                const products = [...this.state.products]
+                products.map(product => {
+                    if(product.id === id) { product.count += count }
+                })
+                this.setState({
+                    products,
+                    total: this.state.total + price * count
+                })
+            }
+
+            remove(id) {
+                let sum = 0
+                const products = [...this.state.products].filter(product => {
+                    if(product.id == id) sum = product.price * product.count
+                    return product.id !== id
+                })
+                this.setState({
+                    products,
+                    total: this.state.total - sum
+                })
+            }
+ 
+            render() {
+                const { products, total } = this.state
+                return (
+                    <div>
+                        <table>
+                            <thead>{this.renderThead()}</thead>
+                            <tbody>
+                                {
+                                    products.length
+                                    ? this.renderTbody()
+                                    : <tr><td>暂无数据</td></tr>
+                                }
+                            </tbody>
+                        </table>
+                        <h2>总金额：{total}</h2>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.createRoot(document.querySelector("#root")).render(<App/>)
+    </script>
+</body>
+</html>

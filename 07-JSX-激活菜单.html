@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        class App extends React.Component {
+            constructor() {
+                super()
+                this.state = {
+                    movies: ["飞驰人生", "热辣滚烫", "第十九条", "红毯先生"],
+                    selectedIndex: 0
+                }
+            }
+
+            changeIndex(index) {
+                this.setState({ selectedIndex: index })
+            }
+
+            render() {
+                return <ol>{this.renderMovies()}</ol>
+            }
+
+            renderMovies() {
+                const { movies, selectedIndex } = this.state
+                return movies.map((movie, index) => (
+                    <li 
+                        key={movie}
+                        onClick={() => this.changeIndex(index)}
+                        style={{
+                            color: index==selectedIndex?'red':'',
+                            cursor: "pointer"
+                        }}
+                    >{movie}</li>
+                ))
+            }
+        }
+
+        ReactDOM.createRoot(document.querySelector("#root")).render(<App/>)
+    </script>
+</body>
+</html>
