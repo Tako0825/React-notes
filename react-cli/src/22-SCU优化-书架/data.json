@@ -1,0 +1,5 @@
+[
+    { "id": 1, "name": "你不知道的JavaScript", "price": 99 },
+    { "id": 2, "name": "JavaScript高级程序设计", "price": 69 },
+    { "id": 3, "name": "Vue与TypeSctipt实战教程", "price": 79 }
+]
