@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "秒杀专区",
+        "description": "折扣狠,送货更快,享受购物",
+        "color": "red"
+    },
+    {
+        "id": 2,
+        "title": "热销推荐",
+        "description": "精选商品,热卖产品,在线下单,省心更放心!轻松购物",
+        "color": "blue"
+    },
+    {
+        "id": 3,
+        "title": "特价清空",
+        "description": "机会难得，全场清仓处理，赔钱甩卖",
+        "color": "green"
+    }
+]
