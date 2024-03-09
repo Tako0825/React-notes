@@ -16,7 +16,8 @@ import ReactDOM from 'react-dom/client';
 // import App from './23-ref-字符串/App'
 // import App from './24-ref-回调/App'
 // import App from './25-ref-createRef/App'
-import App from './26-ref-forwardRef/App'
+// import App from './26-ref-forwardRef/App'
+import App from './27-受控组件-input/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
