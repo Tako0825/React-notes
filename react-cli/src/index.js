@@ -22,7 +22,10 @@ import ReactDOM from 'react-dom/client';
 // import App from './29-受控组件-checkbox/App'
 // import App from './30-受控组件-select/App'
 // import App from './31-非受控组件-defaultValue/App'
-import App from './32-高阶组件-props注入/App'
+// import App from './32-高阶组件-props注入/App'
+// import App from './33-高阶组件-context注入/App'
+// import App from './34-高阶组件-登录鉴权/App'
+import App from './35-高阶组件-渲染时长/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

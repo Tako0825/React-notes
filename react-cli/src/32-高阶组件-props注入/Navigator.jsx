@@ -1,11 +1,13 @@
 import React, { PureComponent } from 'react'
+import withInjectedProps from './hocs/withInjectedProps'
 
 export class Navigator extends PureComponent {
   render() {
+    const { text, date } = this.props
     return (
-      <div>Navigator</div>
+      <div>{text}: {date}</div>
     )
   }
 }
 
-export default Navigator
+export default withInjectedProps(Navigator)

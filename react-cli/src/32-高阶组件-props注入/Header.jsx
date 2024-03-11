@@ -1,11 +1,13 @@
 import React, { PureComponent } from 'react'
+import withInjectedProps from './hocs/withInjectedProps'
 
 export class Header extends PureComponent {
   render() {
+    const { text, date } = this.props
     return (
-      <div>Header</div>
+      <div>{text}: {date}</div>
     )
   }
 }
 
-export default Header
+export default withInjectedProps(Header)

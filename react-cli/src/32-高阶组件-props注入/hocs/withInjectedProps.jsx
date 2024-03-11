@@ -2,8 +2,8 @@ import { PureComponent } from "react";
 
 const withInjectedProps = (Component) => {
     class NewComponent extends PureComponent {
-        constructor() {
-            super()
+        constructor(props) {
+            super(props)
             this.state = {
                 date: new Date().toLocaleString()
             }
@@ -12,7 +12,10 @@ const withInjectedProps = (Component) => {
         render() {
             return (
                 <div>
-                    <Component />: {this.state.date}
+                    <Component 
+                        {...this.props}
+                        date={this.state.date}
+                    />
                 </div>
             )
         }

@@ -8,9 +8,9 @@ export class App extends Component {
     return (
       <div>
         <h1>App</h1>
-        <Header />
-        <Navigator />
-        <Footer />
+        <Header text="Header"/>
+        <Navigator text="Navigator"/>
+        <Footer text="Footer"/>
       </div>
     )
   }
