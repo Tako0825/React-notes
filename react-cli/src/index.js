@@ -25,9 +25,11 @@ import ReactDOM from 'react-dom/client';
 // import App from './32-高阶组件-props注入/App'
 // import App from './33-高阶组件-context注入/App'
 // import App from './34-高阶组件-登录鉴权/App'
-import App from './35-高阶组件-渲染时长/App'
+// import App from './35-高阶组件-渲染时长/App'
+// import App from './36-portal-createPortal/App'
+import App from './37-Fragment/App'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   // <React.StrictMode>
     <App />
