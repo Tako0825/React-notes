@@ -17,7 +17,12 @@ import ReactDOM from 'react-dom/client';
 // import App from './24-ref-回调/App'
 // import App from './25-ref-createRef/App'
 // import App from './26-ref-forwardRef/App'
-import App from './27-受控组件-input/App'
+// import App from './27-受控组件-input/App'
+// import App from './28-受控组件-password/App'
+// import App from './29-受控组件-checkbox/App'
+// import App from './30-受控组件-select/App'
+// import App from './31-非受控组件-defaultValue/App'
+import App from './32-高阶组件-props注入/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
