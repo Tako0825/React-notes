@@ -27,7 +27,10 @@ import ReactDOM from 'react-dom/client';
 // import App from './34-高阶组件-登录鉴权/App'
 // import App from './35-高阶组件-渲染时长/App'
 // import App from './36-portal-createPortal/App'
-import App from './37-Fragment/App'
+// import App from './37-Fragment/App'
+// import App from './38-CSS-内联样式/App'
+// import App from './39-CSS-Modules/App'
+import App from './40-CSS-in-JavaSctipt/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
