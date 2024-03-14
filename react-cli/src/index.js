@@ -33,7 +33,8 @@ import ReactDOM from 'react-dom/client';
 // import App from './40-CSS-in-JavaSctipt/App'
 // import App from './41-CSS-Transition/App'
 // import App from './42-CSS-SwitchTransition/App'
-import App from './43-CSS-TransitionGroup/App'
+// import App from './43-CSS-TransitionGroup/App'
+import App from './44-Redux-计数器/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
