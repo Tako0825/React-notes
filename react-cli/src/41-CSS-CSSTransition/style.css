@@ -1,0 +1,30 @@
+.slogan {
+    background-color: greenyellow;
+    font-weight: bold;
+}
+
+.slogan-appear, .slogan-enter {
+    opacity: 0;
+    transform: translateX(-100px)
+}
+
+.slogan-appear-active, .slogan-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 2s ease;
+}
+
+.slogan-exit {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slogan-exit-active {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 2s ease;
+}
+
+.slogan-exit-done {
+    display: none;
+}

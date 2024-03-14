@@ -30,7 +30,10 @@ import ReactDOM from 'react-dom/client';
 // import App from './37-Fragment/App'
 // import App from './38-CSS-内联样式/App'
 // import App from './39-CSS-Modules/App'
-import App from './40-CSS-in-JavaSctipt/App'
+// import App from './40-CSS-in-JavaSctipt/App'
+// import App from './41-CSS-Transition/App'
+// import App from './42-CSS-SwitchTransition/App'
+import App from './43-CSS-TransitionGroup/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
