@@ -34,7 +34,10 @@ import ReactDOM from 'react-dom/client';
 // import App from './41-CSS-Transition/App'
 // import App from './42-CSS-SwitchTransition/App'
 // import App from './43-CSS-TransitionGroup/App'
-import App from './44-Redux-计数器/App'
+// import App from './44-Redux-计数器/App'
+// import App from './45-Redux-绑定react-redux/App'
+// import App from './46-Redux-异步redux-thunk/App'
+import App from './47-Redux-模块combineReducers/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
