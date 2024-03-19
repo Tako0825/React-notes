@@ -38,11 +38,16 @@ import ReactDOM from 'react-dom/client';
 // import App from './45-Redux-绑定react-redux/App'
 // import App from './46-Redux-异步redux-thunk/App'
 // import App from './47-Redux-模块combineReducers/App'
-import App from './48-Redux-工具箱Toolkit/App'
+// import App from './48-Redux-工具箱Toolkit/App'
+// import App from './49-Router-路由/App'
+import App from './50-Router-路由表/App'
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   // <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   // </React.StrictMode>
 );
